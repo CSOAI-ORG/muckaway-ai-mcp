@@ -1,0 +1,10 @@
+name: muckaway-ai-mcp
+description: "MEOK AI Labs — Built by MEOK AI Labs | https://muckaway.ai"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/muckaway-ai-mcp
+license: MIT
+categories: [Construction, Waste Management]
+tags: [muckaway, waste-removal, construction-waste, demolition, excavation]
+runtime: python
+entrypoint: server.py
