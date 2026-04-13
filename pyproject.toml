@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "muckaway-ai-mcp"
+version = "1.0.0"
+description = "MEOK AI Labs — Waste logistics & skip hire MCP Server"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+authors = [{name = "MEOK AI Labs", email = "nicholas@meok.ai"}]
+keywords = ["mcp", "waste", "skip-hire", "logistics", "construction", "meok"]
+dependencies = ["mcp>=1.0.0"]
+[project.urls]
+Homepage = "https://muckaway.ai"
+Repository = "https://github.com/CSOAI-ORG/muckaway-ai-mcp"
