@@ -7,6 +7,11 @@ disposal facility lookup, and Waste Transfer Note generation.
 Covers Environmental Protection Act 1990 and Duty of Care regulations.
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import math
 import re
 import time
@@ -430,7 +435,7 @@ def estimate_waste_volume(
     width_m: float,
     depth_m: float,
     waste_type: str = "general",
-    compaction_factor: float = 1.0) -> dict:
+    compaction_factor: float = 1.0, api_key: str = "") -> dict:
     """Estimate waste volume from dimensions and recommend skip size.
 
     Calculates cubic metres from length x width x depth, applies a compaction
@@ -449,6 +454,10 @@ def estimate_waste_volume(
     Returns:
         Volume in cubic metres, estimated weight, recommended skip size, and pricing.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade at https://muckaway.ai/pricing"}
 
@@ -522,7 +531,7 @@ def get_skip_pricing(
     skip_size: str,
     on_road: bool = False,
     hire_days: int = 14,
-    region: str = "london") -> dict:
+    region: str = "london", api_key: str = "") -> dict:
     """Return skip hire pricing by size with permit costs.
 
     Covers all standard UK skip sizes from 4yd mini to 40yd roll-on.
@@ -540,6 +549,10 @@ def get_skip_pricing(
     Returns:
         Detailed pricing breakdown including hire, permit, and VAT.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded."}
 
@@ -620,7 +633,7 @@ def get_skip_pricing(
 @mcp.tool()
 def check_waste_type(
     description: str,
-    materials: Optional[list[str]] = None) -> dict:
+    materials: Optional[list[str]] = None, api_key: str = "") -> dict:
     """Classify waste type and return disposal requirements.
 
     Classifies waste as general, heavy/inert, hazardous, recyclable, or green
@@ -636,6 +649,10 @@ def check_waste_type(
     Returns:
         Waste classification, disposal requirements, regulations, and costs.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded."}
 
@@ -734,7 +751,7 @@ def calculate_transport(
     waste_weight_tonnes: float,
     return_trip: bool = True,
     congestion_zone: bool = False,
-    ulez: bool = False) -> dict:
+    ulez: bool = False, api_key: str = "") -> dict:
     """Calculate haulage cost for waste transport.
 
     Pricing based on vehicle type, distance, waste weight, and London
@@ -752,6 +769,10 @@ def calculate_transport(
     Returns:
         Detailed haulage cost breakdown.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded."}
 
@@ -828,7 +849,7 @@ def calculate_transport(
 @mcp.tool()
 def find_nearest_tip(
     postcode: str,
-    waste_type: str) -> dict:
+    waste_type: str, api_key: str = "") -> dict:
     """Find nearest licensed waste disposal facilities by waste type and postcode.
 
     Searches UK licensed facilities that accept the specified waste type,
@@ -841,6 +862,10 @@ def find_nearest_tip(
     Returns:
         List of matching facilities with permit details and accepted waste types.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded."}
 
@@ -904,7 +929,7 @@ def generate_waste_transfer_note(
     destination_name: str = "",
     destination_permit_number: str = "",
     sic_code: str = "",
-    transfer_date: str = "") -> dict:
+    transfer_date: str = "", api_key: str = "") -> dict:
     """Generate a Waste Transfer Note with all legally mandatory fields.
 
     A Waste Transfer Note is required by law for EVERY transfer of
@@ -931,6 +956,10 @@ def generate_waste_transfer_note(
     Returns:
         Complete Waste Transfer Note with all mandatory fields and reference number.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded."}
 

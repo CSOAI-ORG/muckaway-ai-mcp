@@ -1,25 +1,189 @@
 {
   "name": "muckaway-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Built by MEOK AI Labs | https://muckaway.ai",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/muckaway-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for everyone.",
+  "version": "1.0.0",
   "tools": [
-    "estimate_waste_volume",
-    "get_skip_pricing",
-    "check_waste_type",
-    "calculate_transport",
-    "find_nearest_tip",
-    "generate_waste_transfer_note"
-  ],
-  "categories": [
-    "Construction",
-    "Waste Management"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "estimate_waste_volume",
+      "description": "Estimate waste volume from dimensions and recommend skip size.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "length_m": {
+            "type": "number"
+          },
+          "width_m": {
+            "type": "number"
+          },
+          "depth_m": {
+            "type": "number"
+          },
+          "waste_type": {
+            "type": "string"
+          },
+          "compaction_factor": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "length_m",
+          "width_m",
+          "depth_m"
+        ]
+      }
+    },
+    {
+      "name": "get_skip_pricing",
+      "description": "Return skip hire pricing by size with permit costs.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "skip_size": {
+            "type": "string"
+          },
+          "on_road": {
+            "type": "boolean"
+          },
+          "hire_days": {
+            "type": "integer"
+          },
+          "region": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "skip_size"
+        ]
+      }
+    },
+    {
+      "name": "check_waste_type",
+      "description": "Classify waste type and return disposal requirements.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "materials": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "required": [
+          "description"
+        ]
+      }
+    },
+    {
+      "name": "calculate_transport",
+      "description": "Calculate haulage cost for waste transport.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "distance_miles": {
+            "type": "number"
+          },
+          "vehicle_type": {
+            "type": "string"
+          },
+          "waste_weight_tonnes": {
+            "type": "number"
+          },
+          "return_trip": {
+            "type": "boolean"
+          },
+          "congestion_zone": {
+            "type": "boolean"
+          },
+          "ulez": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "distance_miles",
+          "vehicle_type",
+          "waste_weight_tonnes"
+        ]
+      }
+    },
+    {
+      "name": "find_nearest_tip",
+      "description": "Find nearest licensed waste disposal facilities by waste type and postcode.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "postcode": {
+            "type": "string"
+          },
+          "waste_type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "postcode",
+          "waste_type"
+        ]
+      }
+    },
+    {
+      "name": "generate_waste_transfer_note",
+      "description": "Generate a Waste Transfer Note with all legally mandatory fields.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "producer_name": {
+            "type": "string"
+          },
+          "producer_address": {
+            "type": "string"
+          },
+          "carrier_name": {
+            "type": "string"
+          },
+          "carrier_licence_number": {
+            "type": "string"
+          },
+          "waste_description": {
+            "type": "string"
+          },
+          "waste_type": {
+            "type": "string"
+          },
+          "ewc_code": {
+            "type": "string"
+          },
+          "quantity_tonnes": {
+            "type": "number"
+          },
+          "quantity_m3": {
+            "type": "number"
+          },
+          "destination_name": {
+            "type": "string"
+          },
+          "destination_permit_number": {
+            "type": "string"
+          },
+          "sic_code": {
+            "type": "string"
+          },
+          "transfer_date": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "producer_name",
+          "producer_address",
+          "carrier_name",
+          "carrier_licence_number",
+          "waste_description",
+          "waste_type"
+        ]
+      }
+    }
+  ]
 }

@@ -1,10 +1,119 @@
 name: muckaway-ai-mcp
-description: "MEOK AI Labs — Built by MEOK AI Labs | https://muckaway.ai"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/muckaway-ai-mcp
-license: MIT
-categories: [Construction, Waste Management]
-tags: [muckaway, waste-removal, construction-waste, demolition, excavation]
-runtime: python
-entrypoint: server.py
+description: "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for\
+  \ everyone."
+version: 1.0.0
+tools:
+- name: estimate_waste_volume
+  description: Estimate waste volume from dimensions and recommend skip size.
+  parameters:
+  - name: length_m
+    type: number
+    required: true
+  - name: width_m
+    type: number
+    required: true
+  - name: depth_m
+    type: number
+    required: true
+  - name: waste_type
+    type: string
+    required: false
+  - name: compaction_factor
+    type: number
+    required: false
+- name: get_skip_pricing
+  description: Return skip hire pricing by size with permit costs.
+  parameters:
+  - name: skip_size
+    type: string
+    required: true
+  - name: on_road
+    type: boolean
+    required: false
+  - name: hire_days
+    type: integer
+    required: false
+  - name: region
+    type: string
+    required: false
+- name: check_waste_type
+  description: Classify waste type and return disposal requirements.
+  parameters:
+  - name: description
+    type: string
+    required: true
+  - name: materials
+    type: array
+    required: false
+- name: calculate_transport
+  description: Calculate haulage cost for waste transport.
+  parameters:
+  - name: distance_miles
+    type: number
+    required: true
+  - name: vehicle_type
+    type: string
+    required: true
+  - name: waste_weight_tonnes
+    type: number
+    required: true
+  - name: return_trip
+    type: boolean
+    required: false
+  - name: congestion_zone
+    type: boolean
+    required: false
+  - name: ulez
+    type: boolean
+    required: false
+- name: find_nearest_tip
+  description: Find nearest licensed waste disposal facilities by waste type and postcode.
+  parameters:
+  - name: postcode
+    type: string
+    required: true
+  - name: waste_type
+    type: string
+    required: true
+- name: generate_waste_transfer_note
+  description: Generate a Waste Transfer Note with all legally mandatory fields.
+  parameters:
+  - name: producer_name
+    type: string
+    required: true
+  - name: producer_address
+    type: string
+    required: true
+  - name: carrier_name
+    type: string
+    required: true
+  - name: carrier_licence_number
+    type: string
+    required: true
+  - name: waste_description
+    type: string
+    required: true
+  - name: waste_type
+    type: string
+    required: true
+  - name: ewc_code
+    type: string
+    required: false
+  - name: quantity_tonnes
+    type: number
+    required: false
+  - name: quantity_m3
+    type: number
+    required: false
+  - name: destination_name
+    type: string
+    required: false
+  - name: destination_permit_number
+    type: string
+    required: false
+  - name: sic_code
+    type: string
+    required: false
+  - name: transfer_date
+    type: string
+    required: false
