@@ -17,10 +17,7 @@ from typing import Optional
 from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP(
-    "muckaway-ai",
-    version="1.0.0",
-    description="UK waste logistics AI - skip hire, waste classification, haulage, disposal, compliance",
-)
+    "muckaway-ai")
 
 # ---------------------------------------------------------------------------
 # Rate limiting
@@ -433,8 +430,7 @@ def estimate_waste_volume(
     width_m: float,
     depth_m: float,
     waste_type: str = "general",
-    compaction_factor: float = 1.0,
-) -> dict:
+    compaction_factor: float = 1.0) -> dict:
     """Estimate waste volume from dimensions and recommend skip size.
 
     Calculates cubic metres from length x width x depth, applies a compaction
@@ -526,8 +522,7 @@ def get_skip_pricing(
     skip_size: str,
     on_road: bool = False,
     hire_days: int = 14,
-    region: str = "london",
-) -> dict:
+    region: str = "london") -> dict:
     """Return skip hire pricing by size with permit costs.
 
     Covers all standard UK skip sizes from 4yd mini to 40yd roll-on.
@@ -625,8 +620,7 @@ def get_skip_pricing(
 @mcp.tool()
 def check_waste_type(
     description: str,
-    materials: Optional[list[str]] = None,
-) -> dict:
+    materials: Optional[list[str]] = None) -> dict:
     """Classify waste type and return disposal requirements.
 
     Classifies waste as general, heavy/inert, hazardous, recyclable, or green
@@ -740,8 +734,7 @@ def calculate_transport(
     waste_weight_tonnes: float,
     return_trip: bool = True,
     congestion_zone: bool = False,
-    ulez: bool = False,
-) -> dict:
+    ulez: bool = False) -> dict:
     """Calculate haulage cost for waste transport.
 
     Pricing based on vehicle type, distance, waste weight, and London
@@ -835,8 +828,7 @@ def calculate_transport(
 @mcp.tool()
 def find_nearest_tip(
     postcode: str,
-    waste_type: str,
-) -> dict:
+    waste_type: str) -> dict:
     """Find nearest licensed waste disposal facilities by waste type and postcode.
 
     Searches UK licensed facilities that accept the specified waste type,
@@ -912,8 +904,7 @@ def generate_waste_transfer_note(
     destination_name: str = "",
     destination_permit_number: str = "",
     sic_code: str = "",
-    transfer_date: str = "",
-) -> dict:
+    transfer_date: str = "") -> dict:
     """Generate a Waste Transfer Note with all legally mandatory fields.
 
     A Waste Transfer Note is required by law for EVERY transfer of
