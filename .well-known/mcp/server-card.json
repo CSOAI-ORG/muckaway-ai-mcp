@@ -1,0 +1,60 @@
+{
+  "name": "muckaway-ai",
+  "description": "\u0001",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/muckaway-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "estimate_waste_volume",
+      "description": "Estimate waste volume from dimensions and recommend skip size."
+    },
+    {
+      "name": "get_skip_pricing",
+      "description": "Return skip hire pricing by size with permit costs."
+    },
+    {
+      "name": "check_waste_type",
+      "description": "Classify waste type and return disposal requirements."
+    },
+    {
+      "name": "calculate_transport",
+      "description": "Calculate haulage cost for waste transport."
+    },
+    {
+      "name": "find_nearest_tip",
+      "description": "Find nearest licensed waste disposal facilities by waste type and postcode."
+    },
+    {
+      "name": "generate_waste_transfer_note",
+      "description": "Generate a Waste Transfer Note with all legally mandatory fields."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
