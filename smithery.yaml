@@ -1,5 +1,6 @@
 name: muckaway-ai-mcp
-description: "\x01"
+description: 'Muckaway Ai MCP server. Tools: estimate waste volume, get skip pricing,
+  check waste type. Built by MEOK AI Labs.'
 version: 1.0.0
 tools:
 - name: estimate_waste_volume

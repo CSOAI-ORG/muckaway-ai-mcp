@@ -1,6 +1,6 @@
 {
   "name": "muckaway-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 \u0001",
+  "description": "Muckaway Ai MCP server. Tools: estimate waste volume, get skip pricing, check waste type. Built by MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
