@@ -21,8 +21,7 @@ from typing import Optional
 
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP(
-    "muckaway-ai")
+mcp = FastMCP("muckaway-ai", instructions="")
 
 # ---------------------------------------------------------------------------
 # Rate limiting
