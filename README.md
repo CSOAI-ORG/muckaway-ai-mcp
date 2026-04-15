@@ -1,59 +1,43 @@
-# Muckaway.AI MCP Server
+# Muckaway AI
 
-> **By [MEOK AI Labs](https://meok.ai)** — Sovereign AI tools for everyone.
+> By [MEOK AI Labs](https://meok.ai) — UK waste removal, skip hire, haulage costing, and waste classification
 
-UK waste logistics AI. Estimate waste volumes, get skip hire pricing, classify waste types, calculate haulage costs, find licensed disposal facilities, and generate legally compliant Waste Transfer Notes.
-
-[![MCPize](https://img.shields.io/badge/MCPize-Listed-blue)](https://mcpize.com/mcp/muckaway-ai)
-[![MIT License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-## Tools
-
-| Tool | Description |
-|------|-------------|
-| `estimate_waste_volume` | Estimate waste volume and recommend skip size |
-| `get_skip_pricing` | Skip hire pricing by size with permit costs |
-| `check_waste_type` | Classify waste type and return disposal requirements |
-| `calculate_transport` | Calculate haulage cost for waste transport |
-| `find_nearest_tip` | Find nearest licensed waste disposal facilities |
-| `generate_waste_transfer_note` | Generate a legally compliant Waste Transfer Note |
-
-## Quick Start
+## Installation
 
 ```bash
-pip install mcp
-git clone https://github.com/CSOAI-ORG/muckaway-ai-mcp.git
-cd muckaway-ai-mcp
+pip install muckaway-ai-mcp
+```
+
+## Usage
+
+```bash
 python server.py
 ```
 
-## Claude Desktop Config
+## Tools
 
-```json
-{
-  "mcpServers": {
-    "muckaway-ai": {
-      "command": "python",
-      "args": ["server.py"],
-      "cwd": "/path/to/muckaway-ai-mcp"
-    }
-  }
-}
-```
+### `quote_skip`
+Get skip hire quotes with pricing by size (4yd to 40yd), including permit costs and weight limits.
 
-## Pricing
+### `classify_waste`
+Classify waste under Environmental Protection Act 1990 categories and recommend disposal methods.
 
-| Plan | Price | Requests |
-|------|-------|----------|
-| Free | $0/mo | 50 requests/month |
-| Pro | $19/mo | 5,000 requests/month |
+### `find_facility`
+Find nearest licensed waste disposal facilities by postcode and waste type.
 
-[Get on MCPize](https://mcpize.com/mcp/muckaway-ai)
+### `generate_wtn`
+Generate a Waste Transfer Note compliant with Duty of Care regulations.
 
-## Part of MEOK AI Labs
+### `haulage_cost`
+Calculate haulage costs based on distance, vehicle type, and load weight.
 
-This is one of 255+ MCP servers by MEOK AI Labs. Browse all at [meok.ai](https://meok.ai) or [GitHub](https://github.com/CSOAI-ORG).
+### `check_compliance`
+Check waste handling compliance against EPA 1990 and Duty of Care regulations.
 
----
-**MEOK AI Labs** | [meok.ai](https://meok.ai) | nicholas@meok.ai | United Kingdom
+## Authentication
+
+Free tier: 60 requests/hour. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+
+## License
+
+MIT — MEOK AI Labs
