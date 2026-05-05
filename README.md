@@ -1,43 +1,38 @@
-# Muckaway AI
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — UK waste removal, skip hire, haulage costing, and waste classification
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/muckaway-ai-mcp)](https://github.com/CSOAI-ORG/muckaway-ai-mcp/stargazers)
+
+# umuckawayU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/muckaway-ai-mcp)](https://www.npmjs.com/package/@meok-ai/muckaway-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/muckaway-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install muckaway-ai-mcp
+# or
+npm install -g @meok-ai/muckaway-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Tools
+## Enterprise Support
 
-### `quote_skip`
-Get skip hire quotes with pricing by size (4yd to 40yd), including permit costs and weight limits.
-
-### `classify_waste`
-Classify waste under Environmental Protection Act 1990 categories and recommend disposal methods.
-
-### `find_facility`
-Find nearest licensed waste disposal facilities by postcode and waste type.
-
-### `generate_wtn`
-Generate a Waste Transfer Note compliant with Duty of Care regulations.
-
-### `haulage_cost`
-Calculate haulage costs based on distance, vehicle type, and load weight.
-
-### `check_compliance`
-Check waste handling compliance against EPA 1990 and Duty of Care regulations.
-
-## Authentication
-
-Free tier: 60 requests/hour. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
