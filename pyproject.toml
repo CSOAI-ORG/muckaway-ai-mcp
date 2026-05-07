@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "muckaway-ai-mcp"
-version = "1.0.3"
+version = "1.0.4"
 readme = "README.md"
 description = "Muckaway Ai MCP server. Tools: estimate waste volume, get skip pricing, check waste type. Built by MEOK AI Labs."
 license = {file = "LICENSE"}
