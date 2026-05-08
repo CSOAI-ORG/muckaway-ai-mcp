@@ -6,40 +6,58 @@
 
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/muckaway-ai-mcp)](https://github.com/CSOAI-ORG/muckaway-ai-mcp/stargazers)
+# Muckaway Ai MCP
 
-# umuckawayU aiU mcp
+**Muckaway.AI MCP Server - Waste Logistics AI**
 
-****
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/muckaway-ai-mcp)](https://www.npmjs.com/package/@meok-ai/muckaway-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-muckaway-ai-mcp)](https://pypi.org/project/meok-muckaway-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/muckaway-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Muckaway.AI MCP Server - Waste Logistics AI
+Built by MEOK AI Labs | https://muckaway.ai
+
+UK waste removal, skip hire, haulage costing, waste classification,
+disposal facility lookup, and Waste Transfer Note generation.
+Covers Environmental Protection Act 1990 and Duty of Care regulations.
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `estimate_waste_volume` | Estimate waste volume from dimensions and recommend skip size. |
+| `get_skip_pricing` | Return skip hire pricing by size with permit costs. |
+| `check_waste_type` | Classify waste type and return disposal requirements. |
+| `calculate_transport` | Calculate haulage cost for waste transport. |
+| `find_nearest_tip` | Find nearest licensed waste disposal facilities by waste type and postcode. |
+| `generate_waste_transfer_note` | Generate a Waste Transfer Note with all legally mandatory fields. |
 
 ## Installation
 
 ```bash
-pip install muckaway-ai-mcp
-# or
-npm install -g @meok-ai/muckaway-ai-mcp
+pip install meok-muckaway-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config:
 
-## Enterprise Support
-
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+```json
+{
+  "mcpServers": {
+    "muckaway-ai": {
+      "command": "python",
+      "args": ["-m", "meok_muckaway_ai_mcp.server"]
+    }
+  }
+}
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
+MIT © [MEOK AI Labs](https://meok.ai)
 <!-- mcp-name: io.github.CSOAI-ORG/muckaway-ai-mcp -->
