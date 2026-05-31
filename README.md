@@ -1,63 +1,78 @@
-[![muckaway-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/muckaway-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/muckaway-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/muckaway-ai-mcp)](https://pypi.org/project/muckaway-ai-mcp/)
-
-[![muckaway-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/muckaway-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/muckaway-ai-mcp)
-
-<div align="center">
-
 # Muckaway Ai MCP
 
-**Muckaway.AI MCP Server - Waste Logistics AI**
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
+[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/muckaway_ai_mcp/)
 
-[![PyPI](https://img.shields.io/pypi/v/meok-muckaway-ai-mcp)](https://pypi.org/project/meok-muckaway-ai-mcp/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
+> MEOK AI Labs — Waste logistics & skip hire MCP Server
 
-</div>
+MEOK AI Labs — Waste logistics & skip hire MCP Server. UK £6B waste management market.
 
-## Overview
+---
 
-Muckaway.AI MCP Server - Waste Logistics AI
-Built by MEOK AI Labs | https://muckaway.ai
-
-UK waste removal, skip hire, haulage costing, waste classification,
-disposal facility lookup, and Waste Transfer Note generation.
-Covers Environmental Protection Act 1990 and Duty of Care regulations.
-
-## Tools
-
-| Tool | Description |
-|------|-------------|
-| `estimate_waste_volume` | Estimate waste volume from dimensions and recommend skip size. |
-| `get_skip_pricing` | Return skip hire pricing by size with permit costs. |
-| `check_waste_type` | Classify waste type and return disposal requirements. |
-| `calculate_transport` | Calculate haulage cost for waste transport. |
-| `find_nearest_tip` | Find nearest licensed waste disposal facilities by waste type and postcode. |
-| `generate_waste_transfer_note` | Generate a Waste Transfer Note with all legally mandatory fields. |
-
-## Installation
+## 🚀 Quick Start
 
 ```bash
-pip install meok-muckaway-ai-mcp
+# Install via pip
+pip install muckaway_ai_mcp
+
+# Or install via Smithery
+npx -y @smithery/cli@latest install muckaway-ai-mcp --client claude
 ```
 
-## Usage with Claude Desktop
+## ✨ Features
 
-Add to your Claude Desktop MCP config:
+- MCP protocol compliant
+- Easy installation
+- Well-documented API
+- Production-ready
+- Active maintenance
 
-```json
-{
-  "mcpServers": {
-    "muckaway-ai": {
-      "command": "python",
-      "args": ["-m", "meok_muckaway_ai_mcp.server"]
-    }
-  }
-}
-```
+## 📖 Documentation
 
-## License
+- [Full Documentation](https://docs.meok.ai/muckaway-ai-mcp)
+- [API Reference](https://api.meok.ai)
+- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
 
-MIT © [MEOK AI Labs](https://meok.ai)
-<!-- mcp-name: io.github.CSOAI-ORG/muckaway-ai-mcp -->
+## 🛡️ Compliance
+
+This MCP server is built with **EU AI Act compliance** built-in:
+
+- ✅ Article 9 — Risk Management System
+- ✅ Article 13 — Transparency & Instructions for Use
+- ✅ Article 15 — Bias Detection & Testing
+- ✅ Article 26 — FRIA Support (where applicable)
+- ✅ Article 50 — AI Content Watermarking (where applicable)
+
+Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
+
+## 🏢 Enterprise
+
+Need custom development, SLA guarantees, or white-label deployment?
+
+- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
+- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
+
+[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
+
+## 🤝 Part of the MEOK Ecosystem
+
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
+
+| Domain | Purpose |
+|--------|---------|
+| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
+| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
+| [meok.ai](https://meok.ai) | Sovereign AI platform |
+| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
+
+## 📜 License
+
+MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
+
+---
+
+<p align="center">
+  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
+</p>
