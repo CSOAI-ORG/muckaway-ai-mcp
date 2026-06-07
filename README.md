@@ -6,6 +6,15 @@
 [![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/muckaway_ai_mcp/)
 
 > MEOK AI Labs — Waste logistics & skip hire MCP Server
+<div align="center">
+
+# Muckaway AI MCP
+
+**Muckaway.AI MCP Server — UK Waste Management & Disposal Compliance**
+
+[![MCP](https://img.shields.io/badge/MCP-Server-blue)](https://github.com/CSOAI-ORG)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](pyproject.toml)
 
 MEOK AI Labs — Waste logistics & skip hire MCP Server. UK £6B waste management market.
 
@@ -19,6 +28,21 @@ pip install muckaway_ai_mcp
 
 # Or install via Smithery
 npx -y @smithery/cli@latest install muckaway-ai-mcp --client claude
+Muckaway AI MCP provides tools for UK waste management compliance — waste classification, disposal facility lookup, duty of care documentation, and environmental permit checking.
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `classify_waste` | Classify waste types by UK EWC codes |
+| `find_disposal_facility` | Find licensed waste disposal facilities |
+| `check_duty_of_care` | Validate duty of care documentation |
+| `generate_waste_transfer_note` | Create waste transfer notes |
+
+## Installation
+
+```bash
+pip install mcp httpx
 ```
 
 ## ✨ Features
@@ -76,3 +100,39 @@ MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 <p align="center">
   <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
 </p>
+```json
+{
+  "mcpServers": {
+    "muckaway-ai-mcp": {
+      "command": "python",
+      "args": ["path/to/server.py"]
+    }
+  }
+}
+```
+
+## Pricing
+
+- **Free:** 10 waste classifications/day
+- **Pro:** £99/mo — unlimited classifications + transfer notes
+- **Enterprise:** £499/mo — full audit trail + API access
+
+---
+
+*Built by MEOK AI Labs | [meok.ai](https://meok.ai)*
+
+<!-- BUY-LADDER:START -->
+
+## 💸 Try MEOK in 30 seconds — instant buy ladder
+
+| Tier | Price | What you get | Stripe |
+|---|---|---|---|
+| Smoke test | **£1** | Signed sample MCP-Hardening report + Article 50 PDF | <https://buy.stripe.com/dRmcN75ScdQS7oh1Uc8k90U> |
+| Quick Kit | **£9** | EU AI Act Article 50 implementation guide (C2PA + EU-Icon) | <https://buy.stripe.com/cNi00la8s1460ZT0Q88k90V> |
+| Founder Call | **£29** | 30-min 1-on-1 with the founder | <https://buy.stripe.com/8x228ta8s6oqbExaqI8k90W> |
+
+> Refundable. UK Stripe — VAT-clean. Builds on the 81-MCP MEOK fleet.
+> Verify any signed report at <https://meok.ai/verify>.
+
+<!-- BUY-LADDER:END -->
+

@@ -1,0 +1,9 @@
+# muckaway-ai-mcp - Auto-trigger Rules
+
+When the user asks about muckaway, use muckaway-ai-mcp tools: estimate_waste_volume, get_skip_pricing, check_waste_type, calculate_transport, find_nearest_tip
+
+**Muckaway.AI MCP Server - Waste Logistics AI**
+
+Install: `pip install muckaway-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

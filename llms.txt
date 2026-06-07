@@ -1,0 +1,39 @@
+# muckaway-ai-mcp
+# **Muckaway.AI MCP Server - Waste Logistics AI**
+
+## Install
+```bash
+pip install muckaway-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `estimate_waste_volume`
+Estimate waste volume from dimensions and recommend skip size.
+
+### `get_skip_pricing`
+Return skip hire pricing by size with permit costs.
+
+### `check_waste_type`
+Classify waste type and return disposal requirements.
+
+### `calculate_transport`
+Calculate haulage cost for waste transport.
+
+### `find_nearest_tip`
+Find nearest licensed waste disposal facilities by waste type and postcode.
+
+### `generate_waste_transfer_note`
+Generate a Waste Transfer Note with all legally mandatory fields.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

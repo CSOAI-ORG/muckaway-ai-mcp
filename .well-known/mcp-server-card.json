@@ -1,0 +1,31 @@
+{
+  "name": "muckaway-ai-mcp",
+  "title": "Muckaway Ai Mcp",
+  "description": "Muckaway Ai MCP server. Tools: estimate waste volume, get skip pricing, check waste type. Built by MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "estimate_waste_volume"
+    },
+    {
+      "name": "get_skip_pricing"
+    },
+    {
+      "name": "check_waste_type"
+    },
+    {
+      "name": "calculate_transport"
+    },
+    {
+      "name": "find_nearest_tip"
+    },
+    {
+      "name": "generate_waste_transfer_note"
+    }
+  ]
+}

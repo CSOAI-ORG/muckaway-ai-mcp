@@ -9,7 +9,6 @@ Covers Environmental Protection Act 1990 and Duty of Care regulations.
 
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import math
@@ -484,7 +483,7 @@ def estimate_waste_volume(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade at https://muckaway.ai/pricing"}
@@ -608,7 +607,7 @@ def get_skip_pricing(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded."}
@@ -723,7 +722,7 @@ def check_waste_type(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded."}
@@ -872,7 +871,7 @@ def calculate_transport(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded."}
@@ -980,7 +979,7 @@ def find_nearest_tip(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded."}
@@ -1088,7 +1087,7 @@ def generate_waste_transfer_note(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded."}
@@ -1185,5 +1184,8 @@ def generate_waste_transfer_note(
     }
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
