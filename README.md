@@ -1,4 +1,6 @@
 <!-- mcp-name: CSOAI-ORG/muckaway-ai-mcp -->
+[![MCP Scorecard: 80/100](https://img.shields.io/badge/proofof.ai-80%2F100-5b21b6)](https://proofof.ai/scorecard/muckaway-ai-mcp.html)
+
 # Muckaway Ai MCP
 
 [![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
