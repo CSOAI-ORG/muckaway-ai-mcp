@@ -1,0 +1,77 @@
+{
+  "name": "muckaway-ai-mcp",
+  "description": "Muckaway Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/muckaway-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "estimate_waste_volume",
+      "name": "Estimate Waste Volume",
+      "description": "estimate_waste_volume via muckaway-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_skip_pricing",
+      "name": "Get Skip Pricing",
+      "description": "get_skip_pricing via muckaway-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_waste_type",
+      "name": "Check Waste Type",
+      "description": "check_waste_type via muckaway-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "calculate_transport",
+      "name": "Calculate Transport",
+      "description": "calculate_transport via muckaway-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "find_nearest_tip",
+      "name": "Find Nearest Tip",
+      "description": "find_nearest_tip via muckaway-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_waste_transfer_note",
+      "name": "Generate Waste Transfer Note",
+      "description": "generate_waste_transfer_note via muckaway-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
