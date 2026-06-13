@@ -4,9 +4,8 @@
   "version": "1.0.7",
   "description": "Muckaway Ai MCP Server by MEOK AI Labs",
   "repository": {
-    "type": "git",
     "url": "https://github.com/CSOAI-ORG/muckaway-ai-mcp",
-    "source": "https://github.com/CSOAI-ORG/muckaway-ai-mcp"
+    "source": "github"
   },
   "packages": [
     {
