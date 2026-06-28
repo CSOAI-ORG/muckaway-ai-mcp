@@ -1312,12 +1312,9 @@ def hire_skip(
             "fix": "supply requested_date_iso as YYYY-MM-DD",
         }
 
-    # Step 1: estimate
-    est = estimate_waste_volume.fn(waste_type, volume_m3) if hasattr(estimate_waste_volume, 'fn') else None
-    # Direct call (we're in-process)
-    from server import _validate_waste_type, _recommend_skip_size, _find_tip  # fallback
-    # Actually call via _check + the lower-level tools
-    # Use existing logic where possible
+    # Step 1: estimate (the high-level tool just picks the skip size directly
+    # from the volume — the 6 low-level tools can do detailed estimation
+    # for human callers)
     skip_size_map = {"mini": 2, "midi": 4, "builders": 6, "large": 8, "roll": 12}
     if volume_m3 <= 2:
         skip = "mini"
