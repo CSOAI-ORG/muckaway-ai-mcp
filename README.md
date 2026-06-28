@@ -139,3 +139,5 @@ MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 
 <!-- BUY-LADDER:END -->
 
+
+<!-- mcp-name: io.github.CSOAI-ORG/muckaway-ai-mcp -->
